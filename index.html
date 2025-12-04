@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- this is the brain of my site and code here helps the browser render it correctly, user does not see most of this information -->
+		<meta charset="UTF-8" />
+		
+		<meta name="description" content="This is a strong description of your website 1-2 sentences." />
+		
+		<meta name="keywords" content="media, production, multimedia, portfolio, media portfolio, photography, design, creator, media producer, Bridget Haina, web design, front end, developer" /> 
+		
+		<meta name="author" content="Bridget Haina" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<title>
+			Bridget Haina Media Portfolio
+		</title>
+		
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		
+		<link href="style.css" type="text/css" rel="stylesheet" />
+		
+	</head>
+	
+	<body>
+		<!-- the body is where all of the visual site elements must live in order for a user to see them -->
+		<header id="topScroll">
+			<div id="leftHead">
+				<h1><a href="index.html">BRIDGET HAINA</a></h1>
+				<nav>
+					<ul>
+						<li><a href="portfolioResume.html">portfolio & resume</a></li>
+						<li><a href="aboutContact.html">about & contact</a></li>
+					</ul>
+				</nav>
+				<h2>Header level 1</h2>
+			</div>
+			
+			<div id="rightHead">
+				<img src="211634_camera_icon.png" alt="a detalied description of the image goes here to assist a screen reader in describing the image to a user with visual impairments" title="should provide a stronger narrative story/caption of the image depicted" width="300px" height="auto" />
+			</div>
+		</header>
+		
+		<section id="homepageContent">
+			<!-- add in the elements needed to render the middle section of your homepage design -->
+			
+			<div id="topImage">
+				<!-- <img src="images/pexels-pixabay-268533.jpg" alt="description here" title="title here" class="headerBannerImg" /> -->
+				<h3>project</h3>
+				
+				<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img_nature_wide.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img_snow_wide.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img_mountains_wide.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+			</div>
+			
+			<div id="pageLinks">
+				<div class="pageImageText">
+					<img src="images/pexels-pixabay-268533.jpg" alt="description here" title="title here" class="pageLinksImg" />
+					<h4>title</h4>
+				</div>
+				<div class="pageImageText">
+					<h4>title</h4>
+					<img src="images/pexels-pixabay-268533.jpg" alt="description here" title="title here" class="pageLinksImg" />
+				</div>
+			</div>
+			
+			<div id="testimonials">
+				<h5><q>elkdsglkshdglkhsalkgjanganboignaoinvdoivngokdsnghfdsaoighiewaghoiwngknvkndsaivnifds</q></h5>
+				<p>hdsflkhdslg</p>
+			</div>			
+		</section>
+		
+		<footer>
+			<!-- add in the elements needed to render the footer section of your homepage design -->
+			<div id="leftFoot">
+				<img src="images/pexels-pixabay-268533.jpg" alt="description here" title="title here" class="footerImgs" />
+				<img src="images/pexels-pixabay-268533.jpg" alt="description here" title="title here" class="footerImgs" />
+				<p>dshgklshghlgah</p>
+			</div>
+			
+			<div id="rightFoot">
+				<a href="#topScroll"><img src="images/pexels-pixabay-268533.jpg" alt="description here" title="title here" class="rightFooterImgs" width="50px" height="50px" /></a>
+			</div>
+		</footer>
+	
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+	
+	</body>
+</html>
